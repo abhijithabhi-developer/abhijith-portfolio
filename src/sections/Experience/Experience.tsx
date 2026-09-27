@@ -38,11 +38,11 @@ function Experience() {
 
           {/* Experience items */}
           <div className="space-y-12">
-            {experiences.map((experience, index) => (
+            {experiences.map((experience,) => (
               <ExperienceCard
                 key={experience.id}
                 experience={experience}
-                index={index + 1}
+              
               />
             ))}
           </div>

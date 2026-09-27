@@ -3,12 +3,9 @@ import useScrollReveal from "../../hooks/useScrollReveal";
 
 type CertificationCardProps = {
   certification: Certification;
-  index: number;
 };
-
 function CertificationCard({
   certification,
-  index,
 }: CertificationCardProps) {
   const { ref, isVisible } = useScrollReveal();
 

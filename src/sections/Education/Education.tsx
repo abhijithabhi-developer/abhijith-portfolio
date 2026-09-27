@@ -32,11 +32,11 @@ function Education() {
 
         {/* Education cards */}
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
-          {education.map((item, index) => (
+          {education.map((item,) => (
             <EducationCard
               key={item.id}
               education={item}
-              index={index + 1}
+       
             />
           ))}
         </div>

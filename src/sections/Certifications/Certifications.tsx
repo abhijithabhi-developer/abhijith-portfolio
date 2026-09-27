@@ -33,11 +33,11 @@ function Certifications() {
 
         {/* Certification Cards */}
         <div className="mt-16 grid gap-8 md:grid-cols-2">
-          {certifications.map((certification, index) => (
+          {certifications.map((certification,) => (
             <CertificationCard
               key={certification.id}
               certification={certification}
-              index={index + 1}
+           
             />
           ))}
         </div>

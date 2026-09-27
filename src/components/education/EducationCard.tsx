@@ -3,12 +3,12 @@ import useScrollReveal from "../../hooks/useScrollReveal";
 
 type EducationCardProps = {
   education: Education;
-  index: number;
+ 
 };
 
 function EducationCard({
   education,
-  index,
+   
 }: EducationCardProps) {
   const { ref, isVisible } = useScrollReveal();
 

@@ -3,12 +3,12 @@ import useScrollReveal from "../../hooks/useScrollReveal";
 
 type ExperienceCardProps = {
   experience: Experience;
-  index: number;
+ 
 };
 
 function ExperienceCard({
   experience,
-  index,
+  
 }: ExperienceCardProps) {
   const { ref, isVisible } = useScrollReveal();
 
