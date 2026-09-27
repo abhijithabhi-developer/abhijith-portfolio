@@ -18,22 +18,22 @@ export const skillCategories: SkillCategory[] = [
     title: "Mobile Application Development",
     description:
       "Building modern cross-platform mobile applications with clean and maintainable architecture.",
-    icon: "/src/assets/icons/skills/mobile_application_development.svg",
+    icon: "/icons/skills/mobile_application_development.svg",
     skills: [
       {
         id: 1,
         name: "Flutter",
-        icon: "/src/assets/icons/skills/flutter.svg",
+        icon: "/icons/skills/flutter.svg",
       },
       {
         id: 2,
         name: "Dart",
-        icon: "/src/assets/icons/skills/dart.svg",
+        icon: "/icons/skills/dart.svg",
       },
       {
         id: 3,
         name: "Android",
-        icon: "/src/assets/icons/skills/android.svg",
+        icon: "/icons/skills/android.svg",
       },
     ],
   },
@@ -43,22 +43,22 @@ export const skillCategories: SkillCategory[] = [
     title: "Frontend Development",
     description:
       "Creating responsive and interactive web interfaces with modern frontend technologies.",
-    icon: "/src/assets/icons/skills/front_end_development.svg",
+    icon: "/icons/skills/front_end_development.svg",
     skills: [
       {
         id: 1,
         name: "React",
-        icon: "/src/assets/icons/skills/react.svg",
+        icon: "/icons/skills/react.svg",
       },
       {
         id: 2,
         name: "TypeScript",
-        icon: "/src/assets/icons/skills/typescript.svg",
+        icon: "/icons/skills/typescript.svg",
       },
       {
         id: 3,
         name: "Tailwind CSS",
-        icon: "/src/assets/icons/skills/tailwindcss.svg",
+        icon: "/icons/skills/tailwindcss.svg",
       },
     ],
   },
@@ -68,22 +68,22 @@ export const skillCategories: SkillCategory[] = [
     title: "Backend Development",
     description:
       "Working with APIs, backend services, and application integration.",
-    icon: "/src/assets/icons/skills/backend.svg",
+    icon: "/icons/skills/backend.svg",
     skills: [
       {
         id: 1,
         name: "REST APIs",
-        icon: "/src/assets/icons/skills/restapi.svg",
+        icon: "/icons/skills/restapi.svg",
       },
       {
         id: 2,
         name: "FastAPI",
-        icon: "/src/assets/icons/skills/fastapi.svg",
+        icon: "/icons/skills/fastapi.svg",
       },
       {
         id: 3,
         name: "Java",
-        icon: "/src/assets/icons/skills/java.svg",
+        icon: "/icons/skills/java.svg",
       },
     ],
   },
@@ -93,23 +93,23 @@ export const skillCategories: SkillCategory[] = [
     title: "Database & Data",
     description:
       "Designing and working with relational databases and structured application data.",
-    icon: "/src/assets/icons/skills/database2.svg",
+    icon: "/icons/skills/database2.svg",
     skills: [
       {
         id: 1,
         name: "PostgreSQL",
-        icon: "/src/assets/icons/skills/pgsql.svg",
+        icon: "/icons/skills/pgsql.svg",
       },
       {
         id: 2,
         name: "SQL",
-        icon: "/src/assets/icons/skills/sql.svg",
+        icon: "/icons/skills/sql.svg",
       },
       {
         id: 3,
         name: "MySQL",
-        icon: "/src/assets/icons/skills/mysql.svg",
+        icon: "/icons/skills/mysql.svg",
       },
     ],
   },
-]
+];

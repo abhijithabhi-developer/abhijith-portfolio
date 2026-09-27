@@ -13,7 +13,7 @@ export const certifications: Certification[] = [
 id: 1,
 title: "Claude Academy:Claude 101",
 issuer: "Anthropic",
- issuerLogo: "/src/assets/icons/certifications/anthropic.svg",
+ issuerLogo: "/icons/certifications/anthropic.svg",
 year: "2026",
 description:
 "Learned the fundamentals of Claude and generative AI through practical lessons. Explored effective prompting, AI-assisted workflows, and using Claude to support research, coding, content creation, and productivity.",
@@ -30,7 +30,7 @@ skills: [
     id: 2,
     title: "Java Full Stack Development",
     issuer: "JSpiders",
-     issuerLogo: "/src/assets/icons/certifications/jspiders.svg",
+     issuerLogo: "/icons/certifications/jspiders.svg",
     year: "2025",
     description:
       "Practical software development training covering programming, web technologies, databases, and application development.",
@@ -51,7 +51,7 @@ skills: [
 id: 3,
 title: "Flutter Internship",
 issuer: "Srishti Innovative",
-    issuerLogo: "/src/assets/icons/certifications/srishti_innovative.svg",
+    issuerLogo: "/icons/certifications/srishti_innovative.svg",
 year: "2024",
 description:
 "Completed a practical internship focused on Flutter and Dart mobile application development. Worked on responsive user interfaces, application features, and cross-platform development. Gained hands-on experience in building and testing mobile applications.",
@@ -71,7 +71,7 @@ skills: [
     id: 4,
     title: "Google Cybersecurity Professional Certificate",
     issuer: "Google",
-    issuerLogo: "/src/assets/icons/certifications/google_icon.svg",
+    issuerLogo: "/icons/certifications/google_icon.svg",
     year: "2024",
     description:
       "Professional training covering cybersecurity fundamentals, security operations, networking, Linux, and threat analysis.",
@@ -86,7 +86,7 @@ skills: [
     id: 5,
     title: "Digital Marketing Certification",
     issuer: "Avodha",
- issuerLogo: "/src/assets/icons/certifications/avodha.svg",
+ issuerLogo: "/icons/certifications/avodha.svg",
     year: "2021",
     description:
       "Training covering website development, search engine optimization, social media marketing, and email marketing.",
@@ -101,7 +101,7 @@ skills: [
 id: 6,
 title: "Cybersecurity Job Simulation",
 issuer: "Tata",
-   issuerLogo: "/src/assets/icons/certifications/tata_icon.svg",
+   issuerLogo: "/icons/certifications/tata_icon.svg",
 year: "2024",
 description:
 "Completed a practical cybersecurity job simulation focused on threat identification, security analysis, and risk assessment. Gained experience in analyzing security scenarios and developing appropriate cybersecurity solutions.",
@@ -117,7 +117,7 @@ skills: [
 id: 7,
 title: "Industrial Metaverse Using Mixed Reality (XR)",
 issuer: "Ingage",
-   issuerLogo: "/src/assets/icons/certifications/ingage.svg",
+   issuerLogo: "/icons/certifications/ingage.svg",
 year: "2024",
 description:
 "Learned the fundamentals of industrial metaverse technologies and extended reality (XR). Explored mixed reality applications, immersive digital environments, and their use in industrial and business applications.",
