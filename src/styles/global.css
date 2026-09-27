@@ -1,0 +1,966 @@
+@import "tailwindcss";
+
+/* =========================================
+   PORTFOLIO GLOBAL DESIGN SYSTEM
+   ========================================= */
+
+:root {
+  /* -----------------------------------------
+     BACKGROUND
+     ----------------------------------------- */
+
+  --color-background: #070812;
+  --color-background-soft: #0b0b18;
+
+  /* -----------------------------------------
+     SURFACES
+     ----------------------------------------- */
+
+  --color-surface: #0d0b1a;
+  --color-card: #151127;
+  --color-card-elevated: #1b1533;
+
+  /* -----------------------------------------
+     BORDERS
+     ----------------------------------------- */
+
+  --color-border: #29233f;
+  --color-border-light: #382d55;
+
+  /* -----------------------------------------
+     PRIMARY BRAND COLORS
+     ----------------------------------------- */
+
+  --color-violet: #7c3aed;
+  --color-violet-bright: #8b5cf6;
+
+  /* -----------------------------------------
+     ACCENT COLORS
+     ----------------------------------------- */
+
+  --color-magenta: #c026d3;
+  --color-cyan: #22d3ee;
+
+  /* -----------------------------------------
+     TEXT
+     ----------------------------------------- */
+
+  --color-text-primary: #f8f7ff;
+  --color-text-secondary: #a9a4bc;
+  --color-text-muted: #716b85;
+
+  /* -----------------------------------------
+     GRADIENTS
+     ----------------------------------------- */
+
+  --gradient-primary: linear-gradient(
+    90deg,
+    #7c3aed 0%,
+    #8b5cf6 35%,
+    #c026d3 65%,
+    #8b5cf6 85%,
+    #7c3aed 100%
+  );
+
+  --gradient-button: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #c026d3
+  );
+}
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #7c3aed 0%,
+    #8b5cf6 35%,
+    #c026d3 65%,
+    #8b5cf6 85%,
+    #7c3aed 100%
+  );
+
+  background-size: 200% auto;
+  background-position: 0% 50%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  animation: gradient-text-shift 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-text-shift {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text {
+    animation: none;
+    background-position: 50% 50%;
+  }
+}
+/* =========================================
+   GLOBAL RESET
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================
+   SUBTLE TECHNICAL GRID
+   ========================================= */
+
+body {
+  background-image:
+    linear-gradient(
+      rgba(139, 92, 246, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(139, 92, 246, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+}
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+button {
+  font: inherit;
+}
+
+/* =========================================
+   TEXT SELECTION
+   ========================================= */
+
+::selection {
+  background: var(--color-violet);
+  color: #ffffff;
+}
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-light);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-violet);
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+.hero-gradient-text {
+  display: inline-block;
+  background-image: linear-gradient(
+    90deg,
+    #7c3aed 0%,
+    #8b5cf6 25%,
+    #c026d3 50%,
+    #8b5cf6 75%,
+    #7c3aed 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: hero-gradient-slide 8s linear infinite;
+}
+
+@keyframes hero-gradient-slide {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 200% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient-text {
+    animation: none;
+  }
+}
+.hero-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: hero-fade-up 0.8s ease-out forwards;
+}
+
+.hero-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.hero-delay-2 {
+  animation-delay: 0.25s;
+}
+
+.hero-delay-3 {
+  animation-delay: 0.4s;
+}
+
+.hero-delay-4 {
+  animation-delay: 0.55s;
+}
+
+.hero-visual {
+  opacity: 0;
+  transform: translateY(20px) scale(0.96);
+  animation: hero-visual-in 1s ease-out 0.25s forwards;
+}
+
+@keyframes hero-fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-visual-in {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-up,
+  .hero-visual {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+/* =========================================
+   Scroll Reveal
+   ========================================= */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   About Cards
+   ========================================= */
+
+.about-card {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  border-color: #382d55;
+  background-color: rgba(21, 17, 39, 0.85);
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.08);
+}
+
+
+/* =========================================
+   Reduced Motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .about-card {
+    transition: none;
+  }
+}
+/* =========================================
+   Add the skill tag style
+   ========================================= */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #29233f;
+  border-radius: 999px;
+  background: rgba(21, 17, 39, 0.7);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #a9a4bc;
+}
+
+/* =========================================
+   Skills Card
+   ========================================= */
+
+.skill-card {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-7px);
+  border-color: #382d55;
+  background-color: rgba(21, 17, 39, 0.85);
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.08);
+}
+
+
+/* =========================================
+   Reduced Motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card {
+    transition: none;
+  }
+}
+/* =========================================
+   Add project card styles
+   ========================================= */
+.project-card {
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #382d55;
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.1);
+}
+
+.project-image {
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-image {
+    transition: none;
+  }
+}
+
+/* =========================================
+  Add timeline animations(Experience)
+   ========================================= */
+  /* ========================================
+   Experience
+======================================== */
+
+.experience-item {
+  position: relative;
+}
+
+
+/* ========================================
+   Experience Card
+======================================== */
+
+.experience-card {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  border-color: #382d55;
+  background-color: rgba(21, 17, 39, 0.82);
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.07);
+}
+
+
+/* ========================================
+   Experience Tags
+======================================== */
+
+.skill-tag {
+  border: 1px solid #29233f;
+  border-radius: 8px;
+  background: rgba(21, 17, 39, 0.7);
+  padding: 6px 10px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #a9a4bc;
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.experience-card:hover .skill-tag {
+  border-color: #382d55;
+  background-color: rgba(27, 21, 51, 0.8);
+  color: #f8f7ff;
+}
+
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .skill-tag {
+    transition: none;
+  }
+}
+
+/* =========================================
+ certification card
+   ========================================= */
+ /* ========================================
+   Certification Card
+======================================== */
+
+.certification-card {
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-8px);
+  border-color: #382d55;
+  background-color: rgba(21, 17, 39, 0.85);
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certification-card {
+    transition: none;
+  }
+}
+
+/* =========================================
+ education card
+========================================= */
+ /* ========================================
+   Education Card
+======================================== */
+
+.education-card {
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  border-color: #382d55;
+  background-color: rgba(21, 17, 39, 0.85);
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .education-card {
+    transition: none;
+  }
+}
+/* =========================================
+ scroll reveal
+========================================= */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+ /* ========================================
+    Contact Section
+ ======================================== */
+
+.contact-container {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #29233f;
+  border-radius: 3rem;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(124, 58, 237, 0.16),
+      transparent 32%
+    ),
+    #0b0b18;
+}
+
+
+/* ========================================
+   Atmospheric Glow
+======================================== */
+
+.contact-glow {
+  position: absolute;
+
+  top: -180px;
+  left: 50%;
+
+  width: 500px;
+  height: 350px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(124, 58, 237, 0.12);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   Contact Heading
+======================================== */
+
+.contact-heading {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+
+  font-weight: 700;
+  letter-spacing: -0.04em;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed 0%,
+    #8b5cf6 35%,
+    #c026d3 65%,
+    #8b5cf6 85%,
+    #7c3aed 100%
+  );
+
+  background-size: 200% auto;
+  background-position: 0% 50%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  animation: contact-heading-shift 8s ease-in-out infinite alternate;
+}
+
+@keyframes contact-heading-shift {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+
+/* ========================================
+   Contact Cards
+======================================== */
+
+.contact-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  min-height: 112px;
+
+  padding: 1.5rem;
+
+  border: 1px solid #29233f;
+  border-radius: 1.75rem;
+
+  background: rgba(13, 11, 26, 0.65);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #382d55;
+
+  background-color: rgba(21, 17, 39, 0.9);
+
+  box-shadow:
+    0 20px 50px rgba(124, 58, 237, 0.08);
+}
+
+
+/* ========================================
+   Contact Icons
+======================================== */
+
+.contact-icon {
+  display: flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 1.25rem;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #c026d3
+  );
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.18);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 10px 30px rgba(124, 58, 237, 0.3);
+}
+
+
+/* ========================================
+   Contact Arrow
+======================================== */
+
+.contact-arrow {
+  margin-left: auto;
+
+  color: #716b85;
+
+  font-size: 1.25rem;
+
+  opacity: 0;
+
+  transform: translateX(-8px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.contact-card:hover .contact-arrow {
+  opacity: 1;
+
+  color: #a78bfa;
+
+  transform: translateX(0);
+}
+
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-heading {
+    animation: none;
+    background-position: 50% 50%;
+  }
+
+  .contact-card,
+  .contact-icon,
+  .contact-arrow {
+    transition: none;
+  }
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 640px) {
+  .contact-container {
+    border-radius: 2rem;
+  }
+
+  .contact-card {
+    min-height: 96px;
+
+    padding: 1.25rem;
+  }
+
+  .contact-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .contact-arrow {
+    display: none;
+  }
+}
+/* ================================
+   Tools Marquee
+================================ */
+
+.tools-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.tools-marquee {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 1.5rem;
+  animation: tools-marquee-scroll 30s linear infinite;
+}
+
+.tool-item {
+  display: flex;
+  min-width: 190px;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #29233f;
+  border-radius: 1rem;
+  background: rgba(13, 11, 26, 0.7);
+  color: #a9a4bc;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.tool-item:hover {
+  border-color: #382d55;
+  background-color: rgba(21, 17, 39, 0.9);
+  color: #f8f7ff;
+  transform: translateY(-3px);
+}
+
+.tool-icon {
+  display: flex;
+  height: 34px;
+  width: 34px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-icon img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes tools-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tools-marquee {
+    animation: none;
+  }
+
+  .tool-item {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .tools-marquee {
+    gap: 1rem;
+  }
+
+  .tool-item {
+    min-width: 160px;
+    padding: 0.85rem 1.1rem;
+  }
+
+  .tool-icon {
+    height: 30px;
+    width: 30px;
+  }
+}
